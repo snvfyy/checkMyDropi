@@ -7,7 +7,7 @@ $(document).ready(function () {
     $("#searchButton").click(function () {
         const url = encodeURI($("#textUrlSearch").val());
         $.ajax({
-            url: $(`api/v1/url/${url}/check`),
+            url: '/api/v1/url/'+url+'/check',
             type: 'GET',
             error: function () {
                 $('#info').html('<p>An error has occurred</p>');
