@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
     $("#searchButton").click(function () {
-        const url = $("#textUrlSearch").val();
+        const url = encodeURI($("#textUrlSearch").val());
         $.ajax({
             url: $(`api/v1/url/${url}/check`),
             type: 'GET',
