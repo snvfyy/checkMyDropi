@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using CheckMyDropi.Api.Models;
 using System.Net;
 using System.IO;
-using CheckMyDropi.Api.Services;
+
 
 namespace CheckMyDropi.Api.Controllers
 {
@@ -22,16 +22,7 @@ namespace CheckMyDropi.Api.Controllers
         }
 
         public IActionResult Index()
-        {
-            var webRequest = WebRequest.Create(@"https://raw.githubusercontent.com/littl3field/DodgyDomainsBot/master/COVID-Dodgy-Domains.txt");
-
-            using (var response = webRequest.GetResponse())
-            using (var content = response.GetResponseStream())
-            using (var reader = new StreamReader(content))
-            {
-                var strContent = reader.ReadToEnd();
-            }
-            
+        {           
             return View();
         }
 
