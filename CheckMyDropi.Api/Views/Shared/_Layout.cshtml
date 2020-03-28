@@ -28,11 +28,9 @@
                         <span class="toggle-icon"></span>
                     </button>
 
-                    <div class="logo">
-                        <a class="logo-wrap" href="#body">
-                            <img class="logo-img logo-img-main" src="img/logo.png" alt="FlameOnePage Logo">
-                            <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="FlameOnePage Dark Logo">
-                        </a>
+                    <div class="nav logo">
+                        @*<img class="logo-img logo-img-active" src="img/logoTest.jpg" alt="FlameOnePage Dark Logo" style="width: 200px;">
+                        <span class="logo-text">Check MyDroppy</span>*@
                     </div>
                 </div>
 
@@ -42,7 +40,6 @@
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#checkUrl">Check url</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
-                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contactUs">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,14 +55,53 @@
         </div>
 
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="img-responsive" src="img/1920x1080/01.jpg" alt="Slider Image">
+            <div class="item active" style="background-color: black;">
+                @*<img class="img-responsive" src="img/1920x1080/01.jpg" alt="Slider Image">*@
                 <div class="container">
                     <div class="carousel-centered">
-                        <div class="margin-b-40">
-                            <h1 class="carousel-title">Check MyDroppy</h1>
-                            <p class="color-white">Check if that url is secure <br /> Comprueba si esa url es segura</p>
+                        @*<div class="margin-b-40">
+                                <h1 class="carousel-title">Check MyDroppy</h1>
+                                <p class="color-white">Check if that url is secure <br /> Comprueba si esa url es segura</p>
+                            </div>*@
+
+                        <!--========== PAGE LAYOUT ==========-->
+                        <!-- Check url -->
+                        <div id="checkUrl">
+                            <div class="content-lg">
+                                <div class="container">
+                                    <div style="text-align: center;">
+                                        <div class="row">
+                                            <span style="font-size: 30px">LOGO</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-search-description">Check if this is a malicious domain using a COVID-19 phishing theme</p>
+                                        </div>
+                                    </div>
+                                    <form action="/" method="get" novalidate="novalidate">
+                                        <div class="input-group">
+                                            <input autocapitalize="off"
+                                                   autocorrect="off"
+                                                   class="form-control text-search-input"
+                                                   data-val="true"
+                                                   data-val-maxlength="The field Account must be a string or array type with a maximum length of '255'."
+                                                   data-val-minlength="The field Account must be a string or array type with a minimum length of '3'."
+                                                   data-val-maxlength-max="255"
+                                                   data-val-minlength-min="5"
+                                                   id="textUrlSearch"
+                                                   name="textUrlSearch"
+                                                   placeholder="example: coronaphishing.co.uk"
+                                                   spellcheck="false"
+                                                   type="url"
+                                                   value="">
+                                            <span class="input-group-btn">
+                                                <button class="search-link-button btn-lg" type="button" id="searchButton">Buscar</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+                        <!-- End Check url -->
                     </div>
                 </div>
             </div>
