@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CheckMyDropi.Api.Controllers
 {
-    [Route("api")]
+    [Route("api/v1/url")]
     public class UrlController : Controller
     {
 
@@ -37,7 +37,7 @@ namespace CheckMyDropi.Api.Controllers
         [Route("{url}/check")]
         public async Task<UrlStatusDTO> CheckUrl(string url)
         {
-            var result = await _context.MaliciousLink.Where(x => url.Contains(x.Url)).ToListAsync();
+            var result = await _context.MaliciousLink.Where(x => url.Equals(x.Url)).ToListAsync();
             if (result == null || !result.Any())
             {
                 return new UrlStatusDTO(true, 0, url, false);
@@ -69,7 +69,7 @@ namespace CheckMyDropi.Api.Controllers
             foreach (string n in news)
             {
                 if (!_context.MaliciousLink.Where(x => x.Url == n).Any())
-                {
+               {
                     _context.MaliciousLink.Add(new Data.Entities.MaliciousLink() { Url = n });
                 }
             }
