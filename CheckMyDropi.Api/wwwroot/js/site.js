@@ -9,6 +9,10 @@ $(document).ready(function () {
     $("#searchButton").click(function (event) {
         event.preventDefault();
         const url = encodeURI($("#textUrlSearch").val());
+        if (url.indexOf("http") > -1) {
+            var url = changeInfo.url.split("/")[2];
+        }
+        url = encodeURI(url);
         $.ajax({
             url: '/api/v1/url/'+url+'/check',
             type: 'GET',
@@ -16,10 +20,13 @@ $(document).ready(function () {
                 $('#info').html('<p>An error has occurred</p>');
             },
             success: function (data) {
-                if (data) {
-
+                console.log(data);
+                if (data.malicius) {
+                    $('#info').html('<p class="danger">This site has been flagged by DROPi as suspicious,\nplease proceed with caution as this could be a phishing link or fake news!</p>');
+                } else {
+                    $('#info').html('<p class="good">This site is clean and good to go!</p>');
                 }
-                alert(data);
+                
             }
         });
     });
