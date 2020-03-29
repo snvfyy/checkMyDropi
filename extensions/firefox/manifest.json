@@ -7,14 +7,15 @@
     "scripts":["background.js","jquery-3.4.1.min.js"]
   },
   "homepage_url":"http://check.mydropi.es/",
-  "page_action": {
-    "default_icon": {
-      "16": "icons/logo_16.png",
-      "32": "icons/logo_32.png",
-      "128": "icons/logo_128.png"
-    }
-  },
+  
   "permissions": [
-    "tabs","http://check.mydropi.es/api/*"
-  ]
+    "tabs",
+    "http://check.mydropi.es/api/*",
+    "activeTab",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "icons/logo_32.png",
+    "default_title": "DROPi"
+  }
 }
