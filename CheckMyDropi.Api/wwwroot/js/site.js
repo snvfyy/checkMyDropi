@@ -26,7 +26,6 @@ $(document).ready(function () {
                 } else {
                     $('#info').html('<p class="good">This site is clean and good to go!</p>');
                 }
-                
             }
         });
     });

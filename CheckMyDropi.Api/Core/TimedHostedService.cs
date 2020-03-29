@@ -36,26 +36,27 @@ namespace CheckMyDropi.Api.Core
 
         private void DoWork(object state)
         {
-           // _logger.LogInformation("Timed Background Service is working.");
+            _logger.LogInformation("Timed Background Service is working.");
 
-            //try
-            //{
-            //    var webRequest = WebRequest.Create(@"http://127.0.0.1/api/update");
-            //    string strContent = null;
-            //    using (var response = webRequest.GetResponse())
-            //    using (var content = response.GetResponseStream())
-            //    using (var reader = new StreamReader(content))
-            //    {
-            //        strContent = reader.ReadToEnd();
-            //    }
-            //    Console.WriteLine(strContent);
+            try
+            {
+                _logger.LogInformation("Timed Background Service is calling: \"http://10.0.0.15/api/v1/url/update\" ");
+                var webRequest = WebRequest.Create(@"http://10.0.0.15/api/url/update");
+                string strContent = null;
+                using (var response = webRequest.GetResponse())
+                using (var content = response.GetResponseStream())
+                using (var reader = new StreamReader(content))
+                {
+                    strContent = reader.ReadToEnd();
+                }
+               // Console.WriteLine(strContent);
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //    Console.WriteLine(ex.StackTrace);
-            //}
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                _logger.LogError(ex.StackTrace);
+            }
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
