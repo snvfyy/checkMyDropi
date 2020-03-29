@@ -11,8 +11,7 @@
       "js": ["contentscript.js"]
     }
   ],
-  
   "permissions": [
-    "tabs","http://check.mydropi.es/api/*"
+    "tabs","http://check.mydropi.es/api/"
   ]
 }
