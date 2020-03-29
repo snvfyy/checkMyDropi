@@ -6,7 +6,7 @@
   "background": {
     "scripts":["background.js","jquery-3.4.1.min.js"]
   },
-  "homepage_url":"http://check.mydropi.es/",
+  "homepage_url":"https://check.mydropi.es/",
   "page_action": {
     "default_icon": {
       "16": "icons/logo_16.png",
@@ -15,6 +15,6 @@
     }
   },
   "permissions": [
-    "tabs","http://check.mydropi.es/api/*"
+    "tabs","https://check.mydropi.es/api/*","http://check.mydropi.es/api/*"
   ]
 }
