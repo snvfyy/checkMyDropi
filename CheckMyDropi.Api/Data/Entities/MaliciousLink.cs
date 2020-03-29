@@ -12,5 +12,7 @@ namespace CheckMyDropi.Api.Data.Entities
 
         [Key]
         public int IdMaliciousLink { get; set; }
+
+        public DateTime Created { get; set; }
     }
 }

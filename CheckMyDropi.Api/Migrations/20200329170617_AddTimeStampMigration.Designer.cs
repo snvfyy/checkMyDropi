@@ -3,14 +3,16 @@ using System;
 using CheckMyDropi.Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CheckMyDropi.Api.Migrations
 {
     [DbContext(typeof(DroppyContext))]
-    partial class DroppyContextModelSnapshot : ModelSnapshot
+    [Migration("20200329170617_AddTimeStampMigration")]
+    partial class AddTimeStampMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

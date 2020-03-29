@@ -1,4 +1,5 @@
 'use strict';
+const cakeNotification = "cake-notification"
   chrome.tabs.onUpdated.addListener(
     function(tabId, changeInfo, tab) {
       if (changeInfo.url) {
@@ -18,11 +19,24 @@
             success: function (data) {
                 console.log(data)
                 if(data.malicius){
-                    alert("This site has been flagged by DROPi as suspicious,\nplease proceed with caution as this could be a phishing link or fake news!");
-                    
+                  browser.notifications.create(cakeNotification, {
+                    "type": "basic",
+                    "iconUrl": browser.runtime.getURL("icons/logo_64.png"),
+                    "title": "Danger!",
+                    "message": "This site has been flagged by DROPi as suspicious,\nplease proceed with caution as this could be a phishing link or fake news!"
+                  });
                 }
+                
             }
         });
       }
     }
   );
+
+  function openPage() {
+    browser.tabs.create({
+      url: "http://check.mydropi.es"
+    });
+  }
+  
+  browser.browserAction.onClicked.addListener(openPage);
