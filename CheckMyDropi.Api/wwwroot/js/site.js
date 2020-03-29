@@ -1,16 +1,14 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-import { Zoom } from "swiper/js/swiper.esm";
-
 // Write your JavaScript code.
 
 $(document).ready(function () {
     $("#searchButton").click(function (event) {
         event.preventDefault();
-        const url = encodeURI($("#textUrlSearch").val());
+        var url = encodeURI($("#textUrlSearch").val());
         if (url.indexOf("http") > -1) {
-            var url = changeInfo.url.split("/")[2];
+            url = changeInfo.url.split("/")[2];
         }
         url = encodeURI(url);
         $.ajax({

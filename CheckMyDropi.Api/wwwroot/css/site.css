@@ -21,6 +21,10 @@
     border-radius: 20px;
 }
 
+.container-text {
+    margin-bottom: 20px;
+}
+
 .text-search-description {
     font-size: 23px;
     color: white;
@@ -38,4 +42,20 @@
 }
 .icons {
     text-align: -webkit-right;
+}
+
+.good {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.danger {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
 }
