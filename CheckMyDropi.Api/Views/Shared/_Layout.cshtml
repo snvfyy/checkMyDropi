@@ -69,18 +69,15 @@
                             <div class="content-lg">
                                 <div class="container">
                                     <div style="text-align: center;">
-                                        <div class="row">
-                                            <img class="logo-img logo-img-main" src="~/img/logo.png" alt="Dropi Logo"/>
-                                        </div>
                                         <div>
                                             <p class="text-search-description">Check if this is a malicious domain using a COVID-19 phishing theme</p>
                                         </div>
                                     </div>
                                     <form action="/" method="get" novalidate="novalidate">
                                         <div class="input-group">
-                                            <input autocapitalize="off"
+                                            <input class="form-control text-search-input"
+                                                   autocapitalize="off"
                                                    autocorrect="off"
-                                                   class="form-control text-search-input"
                                                    data-val="true"
                                                    data-val-maxlength="The field Account must be a string or array type with a maximum length of '255'."
                                                    data-val-minlength="The field Account must be a string or array type with a minimum length of '3'."
@@ -93,7 +90,7 @@
                                                    type="url"
                                                    value="">
                                             <span class="input-group-btn">
-                                                <button class="search-link-button btn-lg" type="button" id="searchButton">Buscar</button>
+                                                <button class="search-link-button" type="button" id="searchButton">Search</button>
                                             </span>
                                         </div>
                                     </form>
