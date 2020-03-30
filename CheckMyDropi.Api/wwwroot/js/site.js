@@ -4,7 +4,8 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    $("#searchButton").click(function (event) {
+
+    $("#formCheck").on("submit", function (event) {
         event.preventDefault();
         var url = encodeURI($("#textUrlSearch").val());
         if (url.indexOf("http") > -1) {
@@ -12,13 +13,12 @@ $(document).ready(function () {
         }
         url = encodeURI(url);
         $.ajax({
-            url: '/api/v1/url/'+url+'/check',
+            url: '/api/v1/url/' + url + '/check',
             type: 'GET',
             error: function () {
                 $('#info').html('<p>An error has occurred</p>');
             },
             success: function (data) {
-                console.log(data);
                 if (data.malicius) {
                     $('#info').html('<p class="danger">This site has been flagged by DROPi as suspicious,\nplease proceed with caution as this could be a phishing link or fake news!</p>');
                 } else {
