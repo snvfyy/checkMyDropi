@@ -9,7 +9,7 @@ const cakeNotification = "cake-notification"
         var url = changeInfo.url.split("/")[2];
          url = encodeURI(url);
         $.ajax({
-            url: 'http://check.mydropi.es/api/v1/url/'+url+'/check',
+            url: 'https://check.mydropi.es/api/v1/url/'+url+'/check',
             type: 'GET',
             crossDomain : true,
             error: function (data) {
@@ -17,7 +17,6 @@ const cakeNotification = "cake-notification"
                 //alert(data);
             },
             success: function (data) {
-                console.log(data)
                 if(data.malicius){
                   browser.notifications.create(cakeNotification, {
                     "type": "basic",
@@ -35,7 +34,7 @@ const cakeNotification = "cake-notification"
 
   function openPage() {
     browser.tabs.create({
-      url: "http://check.mydropi.es"
+      url: "https://check.mydropi.es"
     });
   }
   

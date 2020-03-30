@@ -10,7 +10,9 @@ $(document).ready(function () {
         if ($("#textUrlSearch").val()) {
             var url = encodeURI($("#textUrlSearch").val());
             if (url.indexOf("http") > -1) {
-                url = changeInfo.url.split("/")[2];
+                url = url.split("/")[2];
+            } else {
+                url = url.split("/")[0];
             }
             url = encodeURI(url);
             $.ajax({

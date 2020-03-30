@@ -40,8 +40,9 @@ namespace CheckMyDropi.Api.Core
 
             try
             {
+                Thread.Sleep(6000);
                 _logger.LogInformation("Timed Background Service is calling: \"http://10.0.0.15/api/v1/url/update\" ");
-                var webRequest = WebRequest.Create(@"http://10.0.0.15/api/url/update");
+                var webRequest = WebRequest.Create(@"http://10.0.0.15/api/v1/url/update");
                 string strContent = null;
                 using (var response = webRequest.GetResponse())
                 using (var content = response.GetResponseStream())
