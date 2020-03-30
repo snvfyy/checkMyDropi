@@ -35,28 +35,37 @@
 
 .icon {
     width: 30px;
+    margin-left: 15px;
 }
 .icons {
     text-align: -webkit-right;
+}
+
+.info {
+    text-align: center;
 }
 
 .good {
     background-color: rgba(255, 255, 255, 0.8);
     color: green;
     font-size: 20px;
-    text-align: center;
     border-radius: 20px;
+    position: absolute;
     margin-top: 10px;
     padding: 15px;
+    left: 33%;
 }
 
 .danger {
     background-color: rgba(0, 0, 0, 0.8);
     color: red;
     font-size: 20px;
-    text-align: center;
     border-radius: 20px;
     position: absolute;
     margin-top: 10px;
     padding: 15px;
+}
+
+.text-description {
+    text-align: center;
 }

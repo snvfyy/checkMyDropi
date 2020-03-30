@@ -15,7 +15,7 @@
     <link href="~/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="~/css/layout.css" rel="stylesheet" type="text/css" />
     <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/img/icons/logo_16.png"  rel="shortcut icon" />
+    <link href="~/img/icons/logo_16.png" rel="shortcut icon" />
 </head>
 
 <body id="body" data-spy="scroll" data-target=".header">
@@ -66,36 +66,34 @@
                         <!--========== PAGE LAYOUT ==========-->
                         <!-- Check url -->
                         <div id="checkUrl">
-                            <div class="content-lg">
-                                <div class="container">
-                                    <div style="text-align: center;">
-                                        <div>
-                                            <p class="text-search-description">Check if this is a malicious domain using a COVID-19 phishing theme</p>
-                                        </div>
+                            <div class="container">
+                                <div class="text-description">
+                                    <div>
+                                        <p class="text-search-description">Check if this is a malicious domain using a COVID-19 phishing theme</p>
                                     </div>
-                                    <form id="formCheck" action="/" method="get" novalidate="novalidate">
-                                        <div class="input-group">
-                                            <input class="form-control text-search-input"
-                                                   autocapitalize="off"
-                                                   autocorrect="off"
-                                                   data-val="true"
-                                                   data-val-maxlength="The field Account must be a string or array type with a maximum length of '255'."
-                                                   data-val-minlength="The field Account must be a string or array type with a minimum length of '3'."
-                                                   data-val-maxlength-max="255"
-                                                   data-val-minlength-min="5"
-                                                   id="textUrlSearch"
-                                                   name="textUrlSearch"
-                                                   placeholder="example.com"
-                                                   spellcheck="false"
-                                                   type="url"
-                                                   value="">
-                                            <span class="input-group-btn">
-                                                <button class="search-link-button" type="submit" id="searchButton">Search</button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                    <div id="info"></div>
                                 </div>
+                                <form id="formCheck" action="/" method="get" novalidate="novalidate">
+                                    <div class="input-group">
+                                        <input class="form-control text-search-input"
+                                               autocapitalize="off"
+                                               autocorrect="off"
+                                               data-val="true"
+                                               data-val-maxlength="The field Account must be a string or array type with a maximum length of '255'."
+                                               data-val-minlength="The field Account must be a string or array type with a minimum length of '3'."
+                                               data-val-maxlength-max="255"
+                                               data-val-minlength-min="5"
+                                               id="textUrlSearch"
+                                               name="textUrlSearch"
+                                               placeholder="example.com"
+                                               spellcheck="false"
+                                               type="url"
+                                               value="">
+                                        <span class="input-group-btn">
+                                            <button class="search-link-button" type="submit" id="searchButton">Search</button>
+                                        </span>
+                                    </div>
+                                </form>
+                                <div id="info"></div>
                             </div>
                         </div>
                         <!-- End Check url -->
