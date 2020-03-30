@@ -1,0 +1,78 @@
+﻿.search-link-button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ccc;
+    color: black;
+    height: 50px;
+    border-radius: 0px 20px 20px 0;
+    padding: 0 20px;
+}
+.search-link-button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.text-search-input {
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.text-search-description {
+    font-size: 23px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.icon {
+    width: 30px;
+    margin-left: 15px;
+}
+.icons {
+    text-align: -webkit-right;
+}
+
+.info {
+    text-align: center;
+}
+
+.good {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: green;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.danger {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: red;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.empty-url {
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.text-description {
+    text-align: center;
+}

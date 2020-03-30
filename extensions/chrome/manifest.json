@@ -1,0 +1,20 @@
+{
+  "name": "DROPi",
+  "version": "1",
+  "description": "The challenge was to fight phishing themed emails and links containing malicious/suspicious domains. As public in general do not have the knowledge to analyse the reputation of these domains we have created DROPi, a web-based or Firefox/Chrome extension for your browser that will pop up an alarm if one of the domains we collect is visited, and will alert the user to proceed with extra caution.",
+  "manifest_version": 2,
+  "background": {
+    "scripts":["background.js","jquery-3.4.1.min.js"]
+  },
+  "homepage_url":"https://check.mydropi.es/",
+  "page_action": {
+    "default_icon": {
+      "16": "icons/logo_16.png",
+      "32": "icons/logo_32.png",
+      "128": "icons/logo_128.png"
+    }
+  },
+  "permissions": [
+    "tabs","https://check.mydropi.es/api/*","http://check.mydropi.es/api/*"
+  ]
+}
