@@ -53,7 +53,6 @@
     position: absolute;
     margin-top: 10px;
     padding: 15px;
-    left: 33%;
 }
 
 .danger {
@@ -64,6 +63,14 @@
     position: absolute;
     margin-top: 10px;
     padding: 15px;
+}
+
+.empty-url {
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 5px;
 }
 
 .text-description {
